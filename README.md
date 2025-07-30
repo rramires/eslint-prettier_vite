@@ -40,3 +40,67 @@ export default defineConfig({
 	plugins: [react()],
 })
 ```
+
+### Limpando o projeto padrão
+
+1 - Exclua todos os aqruivos .css e .svg
+
+```sh
+// remover
+public/vite.svg
+assets/react.svg
+// remover
+App.css
+index.css
+```
+
+2 - Remova os imports desnecessários de **main.tsx**:
+
+```js
+// remover
+import './index.css'
+```
+
+3 - Remova os imports e códigos desnecessários de **App.tsx**:
+
+```js
+// remover
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+// remover
+const [count, setCount] = useState(0)
+// remover todo HTML do return (...)
+```
+
+4 - Adicione apenas um Hello World no return do **App.tsx**, ficando:
+
+```html
+<h1>Hello World !!!</h1>
+```
+
+4 - Mude para a exportação direta do módulo, ficando:
+
+```js
+export function App() {
+	return (
+		<>
+			<h1>Hello World !!!</h1>
+		</>
+	)
+}
+```
+
+-   Vai dar erro de importação no **main.tsx**
+
+5 - Corrija a importação no **main.tsx**, adicionando chaves { }:
+
+```js
+// mudar de
+import App from './App.tsx'
+// para
+import { App } from './App.tsx'
+```
+
+-   Com isso, o projeto está limpo, pronto para ser organizado ao seu critério e exibindo apenas um **Hello World !!!** na página inicial.
