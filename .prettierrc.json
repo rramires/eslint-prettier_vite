@@ -2,6 +2,8 @@
     "printWidth": 100,
     "endOfLine": "lf",
     "singleQuote": true,
+    "jsxSingleQuote": true,
+    "quoteProps": "as-needed",
     "semi": false,
     "useTabs": true,
     "tabWidth": 4,

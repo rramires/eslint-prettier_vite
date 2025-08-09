@@ -134,6 +134,8 @@ dist
   **printWidth=100** - Largura máxima de uma linha (quebra após passar)  
   **endOfLine="lf"** - Quebra de linha, "lf" padrão unix  
   **singleQuote=true** - Aspas simples  
+  **jsxSingleQuote=true** - Aspas simples no jsx também  
+  **quoteProps="as-needed"** - Usa aspas nas propriedases, só quando necessário  
   **semi=false** - Sem ponto e virgula  
   **useTabs=true** - Usar tabs em vez de espaços para indentação  
   **tabWidth=4** - Tab equvalente a 4 espaços  
@@ -144,6 +146,8 @@ dist
 	"printWidth": 100,
 	"endOfLine": "lf",
 	"singleQuote": true,
+	"jsxSingleQuote": true,
+	"quoteProps": "as-needed",
 	"semi": false,
 	"useTabs": true,
 	"tabWidth": 4,
