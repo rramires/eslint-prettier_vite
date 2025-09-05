@@ -43,7 +43,7 @@ export default defineConfig({
 
 ### Limpando o projeto padrão
 
-1 - Exclua todos os aqruivos .css e .svg
+1 - Exclua todos os arquivos .css e .svg
 
 ```sh
 // remover
@@ -103,6 +103,12 @@ import App from './App.tsx'
 import { App } from './App.tsx'
 ```
 
+6 - Comente a linha do Favicon no **index.html**:
+
+```html
+<!-- <link rel="icon" type="image/svg+xml" href="logo.svg" /> -->
+```
+
 - Com isso, o projeto está limpo, pronto para ser organizado ao seu critério e exibindo apenas um **Hello World !!!** na página inicial.
 
 ---
@@ -131,7 +137,7 @@ dist
 [Prettier Options](https://prettier.io/docs/options)
 
 - Minha configuração:  
-  **printWidth=100** - Largura máxima de uma linha (quebra após passar)  
+  **printWidth=80** - Largura máxima de uma linha (quebra após passar)  
   **endOfLine="lf"** - Quebra de linha, "lf" padrão unix  
   **singleQuote=true** - Aspas simples  
   **jsxSingleQuote=true** - Aspas simples no jsx também  
@@ -143,7 +149,7 @@ dist
 
 ```json
 {
-	"printWidth": 100,
+	"printWidth": 80,
 	"endOfLine": "lf",
 	"singleQuote": true,
 	"jsxSingleQuote": true,
@@ -168,9 +174,12 @@ Para verificar/adicionar no **settings.json**.
 
 É essa linha que é adicionada ao clicar na caixa de seleção.
 
-4 - Para que funcione ao salvaro arquivo ou no autoSave, adicione também no **settings.json**:
+4 - Para que funcione ao salvar o arquivo ou no autoSave, adicione também no **settings.json**:
 
 ```json
+// Verifique se existe:
+"editor.formatOnSave": true
+// Se não funcionar nos	.tsx, tente adicionar
 "[typescriptreact]": {
     "editor.formatOnSave": true
 },
